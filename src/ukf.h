@@ -105,6 +105,8 @@ public:
 
 private:
     void NormalizeAngle(double *angle);
+
+    void UpdateBoth(int n_z, MeasurementPackage meas_package, MatrixXd Zsig);
 };
 
 #endif /* UKF_H */
