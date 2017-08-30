@@ -104,8 +104,18 @@ public:
     void UpdateRadar(MeasurementPackage meas_package);
 
 private:
+    /**
+     * Extracted function to place within range of PI and -PI
+     * @param angle Angle in radians
+     */
     void NormalizeAngle(double *angle);
 
+    /**
+     * Update function used by both Lidar and Radar
+     * @param n_z The number of rows
+     * @param meas_package Measurement from main
+     * @param Zsig matrix for sigma points in measurement space
+     */
     void UpdateBoth(int n_z, MeasurementPackage meas_package, MatrixXd Zsig);
 };
 
